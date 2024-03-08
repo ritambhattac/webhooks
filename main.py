@@ -5,10 +5,10 @@ app = FastAPI()
 @app.post("/webhook")
 def check_payload(payload: dict):
     if "after" in payload:
-        return {"data": "there was a push event"}
         print(dict)
-    else:
-        raise HTTPException(status_code=400, detail="unable to get payload")
+        return {"data": "there was a push event"}
+    
+    raise HTTPException(status_code=400, detail="unable to get payload")
 
 
 @app.get("/test")
