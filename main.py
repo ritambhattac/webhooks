@@ -6,6 +6,7 @@ app = FastAPI()
 def check_payload(payload: dict):
     if "after" in payload:
         return {"data": "there was a push event"}
+        print(dict)
     else:
         raise HTTPException(status_code=400, detail="unable to get payload")
 
