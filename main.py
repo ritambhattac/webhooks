@@ -2,7 +2,6 @@ from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
 
-
 @app.post("/webhook")
 def check_payload(payload: dict):
     if "after" in payload:
